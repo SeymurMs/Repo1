@@ -1,0 +1,29 @@
+﻿@model List<Slider>
+@{
+    ViewData["Title"] = "Index";
+}
+<a class="btn btn-primary" asp-controller="Slider" asp-action="Create">Add</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Job</th>
+            <th scope="col">Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <td>@item.Title</td>
+                <td>@item.Descripiton</td>
+                <td>@item.Job</td>
+                <td><img src="./assets/img/@item.ImageUrl"></img></td>
+            </tr>
+
+        }
+    </tbody>
+</table>

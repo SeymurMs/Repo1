@@ -1,0 +1,228 @@
+.selected {
+  position: relative;
+}
+
+.selected::before {
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  content: "";
+  top: 0;
+  bottom: 0;
+  background-color: yellow;
+}
+
+.about {
+  padding-top: 150px;
+  height: 700px;
+}
+
+.about h1 {
+  color: white;
+}
+
+.about p {
+  color: white;
+}
+
+.about button {
+  border: 0.3px solid white;
+  color: white;
+  transition: 0.4s all;
+}
+
+.about button:hover {
+  background-color: white !important;
+}
+
+.images img {
+  padding-top: 100px;
+  width: 100%;
+}
+
+#Home {
+  background-image: url("../img/hero-bg.svg");
+  height: 1000px;
+  background-repeat: no-repeat;
+}
+
+#features .card {
+  align-items: center;
+  border: none;
+}
+
+#features .card i {
+  font-size: 100px;
+  color: #008B8B;
+}
+
+#features .card-body {
+  text-align: center;
+}
+
+#aboutSec {
+  padding: 40px;
+  height: 750px;
+}
+
+#aboutSec .aboutImg {
+  background-image: url("../img/about-left-shape.svg");
+  background-repeat: no-repeat;
+  height: 1000px;
+  position: relative;
+  z-index: -2;
+}
+
+#aboutSec .aboutImg img {
+  width: 100%;
+  margin-left: 54px;
+  margin-top: 56px;
+}
+
+#aboutSec .aboutImg .dots {
+  position: absolute;
+  width: 50% !important;
+  margin-left: 206px;
+  margin-top: -81px;
+  z-index: -1;
+}
+
+#aboutSec .aboutDesc h1 {
+  padding-top: 120px;
+  font-size: 30px;
+  padding-left: 26px;
+}
+
+#aboutSec .aboutDesc p {
+  padding: 30px;
+}
+
+#aboutSec .aboutDesc a {
+  padding: 10px;
+  border: 1px solid #008B8B;
+  border-radius: 25px;
+  color: #008B8B;
+  transition: 0.4s all;
+  margin-left: 27px;
+}
+
+#aboutSec .aboutDesc a:hover {
+  background-color: #008B8B;
+  color: white;
+}
+
+#aboutSecRight {
+  padding: 40px;
+  height: 750px;
+}
+
+#aboutSecRight .aboutImg {
+  background-image: url("../img/about-right-shape.svg");
+  background-repeat: no-repeat;
+  height: 1000px;
+  position: relative;
+  z-index: -2;
+}
+
+#aboutSecRight .aboutImg img {
+  width: 100%;
+  margin-left: 54px;
+  margin-top: 56px;
+}
+
+#aboutSecRight .aboutImg .dots {
+  position: absolute;
+  width: 50% !important;
+  margin-left: 206px;
+  margin-top: -81px;
+  z-index: -1;
+}
+
+#aboutSecRight .aboutDesc h1 {
+  padding-top: 120px;
+  font-size: 30px;
+  padding-left: 26px;
+}
+
+#aboutSecRight .aboutDesc p {
+  padding: 30px;
+}
+
+#aboutSecRight .aboutDesc ul li {
+  font-size: 30px;
+  color: #008B8B;
+}
+
+#aboutSecRight .aboutDesc a {
+  padding: 10px;
+  border: 1px solid #008B8B;
+  border-radius: 25px;
+  color: #008B8B;
+  transition: 0.4s all;
+  margin-left: 27px;
+}
+
+#aboutSecRight .aboutDesc a:hover {
+  background-color: #008B8B;
+  color: white;
+}
+
+#why {
+  padding: 40px;
+}
+
+#why .headWhy {
+  text-align: center;
+}
+
+#why .cards {
+  text-align: center;
+  padding: 40px;
+}
+
+#why .cards .card {
+  border: none;
+}
+
+#why .cards .card i {
+  font-size: 100px;
+  color: #008B8B;
+}
+
+#clients {
+  padding: 40px;
+  height: 750px;
+}
+
+#clients .aboutImg {
+  background-image: url("../img/about-left-shape.svg");
+  background-repeat: no-repeat;
+  height: 1000px;
+  position: relative;
+  z-index: -2;
+}
+
+#clients .aboutImg img {
+  position: relative;
+  width: 30%;
+  margin-left: 275px;
+  margin-top: 157px;
+  z-index: 2;
+}
+
+#clients .aboutImg .dots {
+  position: relative;
+  width: 50% !important;
+  margin-left: 143px;
+  margin-top: -81px;
+  z-index: -1;
+}
+
+#clients {
+  height: 700px;
+}
+
+#clients .crausel-item h5 {
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */

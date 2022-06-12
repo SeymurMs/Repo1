@@ -1,0 +1,28 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post" class="user" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Title" class="form-control form-control-user"
+             placeholder="Name Here.........">
+    </div> 
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Descripiton" class="form-control form-control-user"
+             placeholder="Title Here.........">
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Job" class="form-control form-control-user"
+             placeholder="Description Here.........">
+    </div>
+    <div class="form-group">
+        <input type="file" asp-for="@Model.Photo" class="form-control form-control-user" />
+    </div>
+    <button type="submit" class="btn btn-primary btn-user btn-block">
+        Create
+    </button>
+    <hr>
+ 
+</form>
+
