@@ -11,6 +11,8 @@
             <th scope="col">Description</th>
             <th scope="col">Job</th>
             <th scope="col">Image</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -21,7 +23,9 @@
                 <td>@item.Title</td>
                 <td>@item.Descripiton</td>
                 <td>@item.Job</td>
-                <td><img src="./assets/img/@item.ImageUrl"></img></td>
+                <td><img style="width:100px" src="~/img/@item.ImageUrl"></td>
+                <td><a class="btn btn-primary" asp-controller="Slider" asp-action="Edit" asp-route-id="@item.Id">Edit</a></td>
+                <td><a class="btn btn-danger" asp-controller="Slider" asp-action="Delete"asp-route-id="@item.Id">Delete</a></td>
             </tr>
 
         }

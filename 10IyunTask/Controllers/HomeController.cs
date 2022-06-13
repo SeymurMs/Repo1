@@ -1,13 +1,23 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using _10IyunTask.DAL;
+using _10IyunTask.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _10IyunTask.Controllers
 {
     public class HomeController : Controller
     {
+        public readonly AppDbContext _context;
+        public HomeController(AppDbContext context)
+        {
+            _context = context;
+        }
         public ActionResult Index()
         {
-            return View();
+            List<Slider> sliders = _context.Sliders.ToList();
+            return View(sliders);
         }
 
         public ActionResult Details(int id)

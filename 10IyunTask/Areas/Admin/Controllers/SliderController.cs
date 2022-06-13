@@ -40,7 +40,7 @@ namespace _10IyunTask.Areas.Admin.Controllers
             if (!ModelState.IsValid) return BadRequest();
             Slider dbSlider = _context.Sliders.FirstOrDefault(s => s.Title.ToLower().Trim().Contains(slider.Title.ToLower().Trim()));
             string filName = Guid.NewGuid().ToString() + slider.Photo.FileName;
-            if (slider.Photo ==null)
+            if (slider.Photo !=null)
             {
                 slider.ImageUrl = slider.Photo.SaveImg(_env.WebRootPath, "img", filName);
                 slider.ImageUrl = filName;
@@ -54,43 +54,55 @@ namespace _10IyunTask.Areas.Admin.Controllers
         // GET: SliderController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Slider slider = _context.Sliders.Find(id);
+            return View(slider);
         }
 
         // POST: SliderController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id,Slider slider)
         {
-            try
+            if (slider == null) return BadRequest();
+
+            Slider DbSlider = _context.Sliders.Find(id);
+            if (slider.Photo == null)
             {
-                return RedirectToAction(nameof(Index));
+                DbSlider.Title = slider.Title;
+                DbSlider.Descripiton = slider.Descripiton;
+                DbSlider.Job = slider.Job;
             }
-            catch
+            else
             {
-                return View();
+                string filName = Guid.NewGuid().ToString() + slider.Photo.FileName;
+                slider.ImageUrl = slider.Photo.SaveImg(_env.WebRootPath, "img", filName);
+                slider.ImageUrl = filName;
+
+                FileManager.DeleteFile(_env.WebRootPath, "img", DbSlider.ImageUrl);
+
+                DbSlider.Title = slider.Title;
+                DbSlider.Descripiton = slider.Descripiton;
+                DbSlider.Job = slider.Job;
+                DbSlider.ImageUrl = filName;
             }
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+            
         }
 
         // GET: SliderController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Slider DbSlider = _context.Sliders.Find(id);
+            if (DbSlider == null)
+            {
+                return BadRequest();
+            }
+            _context.Sliders.Remove(DbSlider);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
 
-        // POST: SliderController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+     
     }
 }

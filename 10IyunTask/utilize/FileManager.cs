@@ -20,10 +20,9 @@ namespace _10IyunTask.utilize
         {
             string rootPath = Path.Combine(root, path);
             string fullPath = Path.Combine(rootPath, fileName);
-            string delete = rootPath + fullPath;
-            if (System.IO.File.Exists(delete))
+            if (System.IO.File.Exists(fullPath))
             {
-                System.IO.File.Delete(delete);
+                System.IO.File.Delete(fullPath);
             }
         }
     }

@@ -299,3 +299,4 @@ C:\Users\devel0per\Desktop\Repo-main\10IyunTask\obj\Debug\netcoreapp3.1\10IyunTa
 C:\Users\devel0per\Desktop\Repo-main\10IyunTask\obj\Debug\netcoreapp3.1\10IyunTask.pdb
 C:\Users\devel0per\Desktop\Repo-main\10IyunTask\obj\Debug\netcoreapp3.1\10IyunTask.genruntimeconfig.cache
 C:\Users\devel0per\Desktop\Repo-main\10IyunTask\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Create.cshtml.g.cs
+C:\Users\devel0per\Desktop\Repo-main\10IyunTask\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Slider\Edit.cshtml.g.cs
